@@ -1,15 +1,15 @@
 {
   "headline": {
     "title": "INVIERTE EN PRIVACIDAD DE METADATOS",
-    "beforeInfoTop": "El tráfico de datos globales <strong>va en aumento</strong> exponencialmente, así como también los riesgos de seguridad.",
+    "beforeInfoTop": "El tráfico de datos globales <strong>va en aumento</strong>exponencialmente, así como también los riesgos de seguridad.",
     "beforeInfoBottom": " HOPR brinda a todos privacidad esencial y complaciente para los metadatos a nivel red.",
     "caption": "Progreso hipotético del precio (si no se realizan compras)",
-    "mainInfo": "Every minute, people and companies transmit millions of gigabytes of data across the globe. This figure is growing exponentially thanks to new technologies such as 5G and the Internet of Things. This data all needs protecting, and so does the metadata it generates. The HOPR protocol provides network-level metadata privacy for everyone, and the HOPR network is driven by the HOPR token.",
+    "mainInfo": "Cada minuto, empresas y personas transmiten millones de gigabytes de datos alrededor del mundo. Esta figura está creciendo exponencialmente gracias a nuevas tecnologías como el 5G y el Internet de las Cosas (IoT). Todos estos datos requieren protección, así como también los metadatos que generan. El protocolo HOPR provee privacidad de metadatos a nivel de red para todos, y la red HOPR está manejada por el token HOPR.",
     "titleTicket": "LANZAMIENTO BALANCER",
     "txtDownNum": "Por token HOPR",
-    "fPoint": "Join our initial limited token release to be one of the first to earn and stake HOPR.",
-    "sPoint": "There will be only XXXX tokens available during this initial phase.",
-    "tPoint": "Tokens will be available via",
+    "fPoint": "Únete a nuestra liberación limitada de tokens para que seas de los primeros en ganar y stakear HOPR.",
+    "sPoint": "Solamente habrán XXXX tokens disponibles durante esta fase inicial.",
+    "tPoint": "Los token estarán disponibles via",
     "tokenLeft": "TOKENS LEFT"
   },
   "back": {
@@ -19,7 +19,7 @@
   },
   "banner": {
     "label": "Se el primero en ganar y participar con tokens HOPR con nuestro lanzamiento de token limitado.",
-    "labelPreSales": "Be among the first who profit the most from staking our HOPR Token.",
+    "labelPreSales": "Se de los primeros en generar ganacias por hacer staking con el token de HOPR.",
     "button": "Obtén Token HOPR",
     "btnCommunity1": "PRE-LANZAMIENTO",
     "btnCommunity2": "PARA LA COMUNIDAD",
@@ -37,19 +37,19 @@
     "voteMain": "Desde los parámetros técnicos a la composición de la mesa directiva de HOPR, participa en gobierno descentralizado y que empodera a la comunidad."
   },
   "further": {
-    "infoBottomATitle": "Our Blog",
-    "infoBottomBTitle": "Our Values",
-    "infoBottomCTitle": "Our Whitepaper",
-    "infoBottomDTitle": "Our organizational structure: Decent Gov",
-    "infoBottomETitle": "HOPR in the Media",
-    "infoTopTitleA": "Install a HOPR node for free via GitHub",
-    "infoTopTitleAAbout": "Anyone can run a HOPR node on their own hardware! We provide easy-to-install software for Linux, macOS, Windows, docker and cloud environments. We also sell a dedicated hardware node for faster staking.",
-    "infoTopTitleB": "Buy a HOPR Node PC",
-    "infoTopTitleBAbout": "The HOPR Node PC is a powerful plug-and-play hardware device which lets you run a HOPR node around the clock.",
-    "title": "Further Reading"
+    "infoBottomATitle": "Nuestro Blog",
+    "infoBottomBTitle": "Nuestros Valores",
+    "infoBottomCTitle": "Nuestro Whitepaper",
+    "infoBottomDTitle": "Nuestra estructura organizacional: Decent Gov",
+    "infoBottomETitle": "HOPR en los medios",
+    "infoTopTitleA": "Instala un nodo HOPR gratis a través de GitHub",
+    "infoTopTitleAAbout": "¡Cualquiera puede ejecutar un nodo HOPR con su propio equipo! Brindamos software fácil de instalar para Linux, macOS, Windows, Docker y entornos de nube. Comienza a ganar tokens HOPR en minutos.",
+    "infoTopTitleB": "Compra un HOPR Node PC",
+    "infoTopTitleBAbout": "El PC HOPR Node es un poderoso hardware plug and play que te permite correr un nodo HOPR a todas horas.",
+    "title": "Lee más"
   },
   "hardware": {
-    "about": "¡Cualquiera puede ejecutar un nodo HOPR con su propio equipo! Brindamos software fácild de instalar para Linux, macOS, Windows, Docker y entornos de nube. Comienza a ganar tokens HOPR en minutos.",
+    "about": "¡Cualquiera puede ejecutar un nodo HOPR con su propio equipo! Brindamos software fácil de instalar para Linux, macOS, Windows, Docker y entornos de nube. Comienza a ganar tokens HOPR en minutos.",
     "caption": "También tenemos a la venta un nodo físico para staking más veloz.",
     "subtitleA": "Ejecuta tu metal",
     "subtitleB": "Tu nodo físico HOPR",
@@ -63,7 +63,7 @@
     "public": "Distribución Pública",
     "team": "Equipo y Consejeros",
     "treasury": "Tesorería",
-    "votes": "# of Votes"
+    "votes": "# de votos"
   },
   "hero": {
     "subtitle": "EL LANZAMIENTO DEL HOPR TOKEN COMIENZA EN:",
