@@ -22,6 +22,10 @@ export default function ItemsMenu() {
       name: 'Token',
     },
     {
+      path: '/win',
+      name: 'Win',
+    },
+    {
       path: 'http://saentis.hoprnet.org/',
       name: 'Testnet',
     },

@@ -25,26 +25,26 @@ export default function Welcome({ welcomeAnimate }) {
         </div>
       </div>
       <div className="section-bottom">
-        <div className="right-container center-on-the-box">
-          <img
-            src="/assets/images/Bildschirmfoto.jpg"
-            alt="COUNTDOWN TO HOPR MAINNET"
-          />
-          <div className="text-area">
-            <h2>COUNTDOWN TO HOPR MAINNET</h2>
-          </div>
-        </div>
-        <div className="left-container center-on-the-box">
-          <Link href="/token">
-            <>
-              <img src="/assets/images/welcomeLeft.jpg" alt="HOPR Token-SALE" />
-              <div className="text-area">
-                <h2>HOPR TOKEN LAUNCH</h2>
-                <Countdown />
-              </div>
-            </>
-          </Link>
-        </div>
+        <Link href="/token">
+          <a className="right-container center-on-the-box">
+            <img src="/assets/images/welcomeLeft.jpg" alt="HOPR Token-SALE" />
+            <div className="text-area">
+              <h2>HOPR TOKEN LAUNCH</h2>
+              <Countdown />
+            </div>
+          </a>
+        </Link>
+        <Link href="/win">
+          <a className="left-container center-on-the-box">
+            <img
+              src="/assets/images/Bildschirmfoto.jpg"
+              alt="COUNTDOWN TO HOPR MAINNET"
+            />
+            <div className="text-area">
+              <h2>COUNTDOWN TO HOPR MAINNET</h2>
+            </div>
+          </a>
+        </Link>
       </div>
     </div>
   );

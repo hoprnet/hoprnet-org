@@ -19,9 +19,15 @@ function makeFriendly(num) {
   return intlFormat(num);
 }
 
+const oLineDefaultOptions = {
+  borderColor: '#fff',
+  borderWidth: 2,
+  pointBorderWidth: 0,
+  lineTension: 0,
+};
+
 const HomeTokenRelease = forwardRef(({ start }, ref) => {
   const [isMobile, setIsMobile] = useState(false);
-
   const { t } = useTranslation();
 
   useEffect(() => {
@@ -30,17 +36,15 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
     }
   }, []);
 
-  const resultPie = Object.keys(dataPie).map((key) => {
-    const aux = [Number(key), dataPie[key]];
-    return aux[1];
-  });
+  const resultPie = Object.keys(dataPie).map((key) =>
+    dataPie[key]
+  );
 
   const allSumResultPie = resultPie.reduce((a, b) => a + b, 0);
 
-  const percentagesPieItem = Object.keys(dataPie).map((key) => {
-    const aux = [Number(key), dataPie[key]];
-    return (aux[1] / allSumResultPie) * 100;
-  });
+  const percentagesPieItem = Object.keys(dataPie).map((key) =>
+    (dataPie[key] / allSumResultPie) * 100
+  );
 
   const labelsPie = [
     t('home:graphic.public'),
@@ -137,30 +141,12 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
   };
 
   const dataDate = dataSupply.map((item) => item.Date);
-  const dataTreasury = dataSupply.map((item) => item.Treasury);
-  const dataTeamNAdvisors = dataSupply.map(
-    (item) => item[t('home:graphic.team')]
-  );
-  const dataEarlyTokenBuyers = dataSupply.map(
-    (item) => item[t('home:graphic.pre')]
-  );
-  const dataBounties = dataSupply.map((item) => item.Bounties);
-  const dataCoverTraffic = dataSupply.map(
-    (item) => item[t('home:graphic.cover')]
-  );
-  const dataPublicSale = dataSupply.map(
-    (item) => item[t('home:graphic.public')]
-  );
+  const processData = (key) =>
+    dataSupply.map(oItem => {
+        let nElem = oItem[key];
 
-  function cleanData(elements) {
-    return elements.map(function (elem) {
-      if (elem === undefined) {
-        return elem;
-      }
-      //parseFloat(elem.split(',').join('').trim())
-      return parseFloat(elem.split(',').join('').trim());
-    });
-  }
+        return nElem ? parseFloat(nElem.split(',').join('').trim()) : undefined;
+      });
 
   const dataOption = {
     maintainAspectRatio: false,
@@ -258,63 +244,46 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
     datasets: start
       ? [
         {
+          ...oLineDefaultOptions,
           label: t('home:graphic.public'),
-          data: cleanData(dataPublicSale),
+          data: processData('Public Distribution'),
           backgroundColor: ['#FEFDAF'],
           pointBackgroundColor: '#FEFDAF',
-          borderColor: '#fff',
-          borderWidth: 2,
-          pointBorderWidth: 0,
-          lineTension: 0,
         },
         {
+          ...oLineDefaultOptions,
           label: t('home:graphic.cover'),
-          data: cleanData(dataCoverTraffic),
+          data: processData('Cover Traffic'),
           backgroundColor: ['#FEFDAF'],
           pointBackgroundColor: '#FEFDAF',
-          borderWidth: 0,
-          pointBorderWidth: 0,
-          lineTension: 0,
         },
         {
+          ...oLineDefaultOptions,
           label: t('home:graphic.bounties'),
-          data: cleanData(dataBounties),
+          data: processData('Bounties'),
           backgroundColor: ['#C0F3FF'],
           pointBackgroundColor: '#C0F3FF',
-          borderColor: '#fff',
-          borderWidth: 2,
-          pointBorderWidth: 0,
-          lineTension: 0,
         },
         {
+          ...oLineDefaultOptions,
           label: t('home:graphic.pre'),
-          data: cleanData(dataEarlyTokenBuyers),
+          data: processData('Early Token Buyers'),
           backgroundColor: ['#4B79B4'],
           pointBackgroundColor: '#4B79B4',
-          borderColor: '#fff',
-          borderWidth: 2,
-          pointBorderWidth: 0,
-          lineTension: 0,
         },
         {
+          ...oLineDefaultOptions,
           label: t('home:graphic.team'),
-          data: cleanData(dataTeamNAdvisors),
+          data: processData('Team & Advisors'),
           backgroundColor: ['#1423C1'],
           pointBackgroundColor: '#1423C1',
-          borderColor: '#fff',
-          borderWidth: 2,
-          pointBorderWidth: 0,
-          lineTension: 0,
         },
         {
+          ...oLineDefaultOptions,
           label: t('home:graphic.treasury'),
-          data: cleanData(dataTreasury),
+          data: processData('Treasury'),
           backgroundColor: ['#060D62'],
           pointBackgroundColor: '#060D62',
-          borderColor: '#fff',
-          borderWidth: 2,
-          pointBorderWidth: 0,
-          lineTension: 0,
         }]
       : '',
   };
@@ -322,48 +291,46 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
   const graphWidth = screen.width < 420 ? 420 : 520;
 
   return (
-    <>
-      <section ref={ref} id="TOKEN-RELEASE" className="section-token-release">
-        <div className="container">
-          <div>
-            <h2>{t('home:token.title')}</h2>
-            <p>{t('home:token.about')}</p>
-          </div>
-          <div className="table-info">
-            <div className="container-table">
-              <div className="title">
-                <h4>{t('home:token.subTitle')}</h4>
-              </div>
-              <div className="list-table">
-                <ul>
-                  <li>{t('home:token.listItemA')}</li>
-                  <li>{t('home:token.listItemB')}</li>
-                  <li>{t('home:token.listItemC')}</li>
-                  <li>{t('home:token.listItemD')}</li>
-                  <li>{t('home:token.listItemE')}</li>
-                  <li>{t('home:token.listItemF')}</li>
-                </ul>
-              </div>
+    <section ref={ref} id="TOKEN-RELEASE" className="section-token-release">
+      <div className="container">
+        <div>
+          <h2>{t('home:token.title')}</h2>
+          <p>{t('home:token.about')}</p>
+        </div>
+        <div className="table-info">
+          <div className="container-table">
+            <div className="title">
+              <h4>{t('home:token.subTitle')}</h4>
             </div>
-          </div>
-          <div>
-            <h3>{t('home:token.secondSubTitle')} (%)</h3>
-            <p>{t('home:token.secondSubAbout')}</p>
-            <div>
-              <Pie data={data} width={100} height={420} options={options} />
-            </div>
-          </div>
-          <div>
-            <h3>{t('home:token.thirdSubTitle')} (M)</h3>
-            <div className="container-chart">
-              <div className="help-scroll">
-                <Line data={dataTokenSupply} width={100} height={graphWidth} options={dataOption} />
-              </div>
+            <div className="list-table">
+              <ul>
+                <li>{t('home:token.listItemA')}</li>
+                <li>{t('home:token.listItemB')}</li>
+                <li>{t('home:token.listItemC')}</li>
+                <li>{t('home:token.listItemD')}</li>
+                <li>{t('home:token.listItemE')}</li>
+                <li>{t('home:token.listItemF')}</li>
+              </ul>
             </div>
           </div>
         </div>
-      </section>
-    </>
+        <div>
+          <h3>{t('home:token.secondSubTitle')} (%)</h3>
+          <p>{t('home:token.secondSubAbout')}</p>
+          <div>
+            <Pie data={data} width={100} height={420} options={options} />
+          </div>
+        </div>
+        <div>
+          <h3>{t('home:token.thirdSubTitle')} (M)</h3>
+          <div className="container-chart">
+            <div className="help-scroll">
+              <Line data={dataTokenSupply} width={100} height={graphWidth} options={dataOption} />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 });
 

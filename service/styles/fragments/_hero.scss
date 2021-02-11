@@ -32,6 +32,14 @@
   transform: translate(-50%, -50%);
   width: 100vw;
   z-index: 1;
+
+  @include responsive(tablet) {
+    transform: translate(-50%, -50%) scale(1.5);
+  }
+
+  @include responsive(phone) {
+    transform: translate(-50%, -50%) scale(1.5);
+  }
 }
 
 .section-hero {

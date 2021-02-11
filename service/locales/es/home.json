@@ -1,7 +1,7 @@
 {
   "headline": {
     "title": "INVIERTE EN PRIVACIDAD DE METADATOS",
-    "beforeInfoTop": "El tráfico de datos globales <strong>va en aumento</strong>exponencialmente, así como también los riesgos de seguridad.",
+    "beforeInfoTop": "El tráfico de datos globales <strong>va en aumento </strong>exponencialmente, así como también los riesgos de seguridad.",
     "beforeInfoBottom": " HOPR brinda a todos privacidad esencial y complaciente para los metadatos a nivel red.",
     "caption": "Progreso hipotético del precio (si no se realizan compras)",
     "mainInfo": "Cada minuto, empresas y personas transmiten millones de gigabytes de datos alrededor del mundo. Esta figura está creciendo exponencialmente gracias a nuevas tecnologías como el 5G y el Internet de las Cosas (IoT). Todos estos datos requieren protección, así como también los metadatos que generan. El protocolo HOPR provee privacidad de metadatos a nivel de red para todos, y la red HOPR está manejada por el token HOPR.",
@@ -72,7 +72,7 @@
   },
   "slide": {
     "slideA": "Sandro Cilurzo, Co-Fundador & CEO de Sedimentum AG.",
-    "slideAMain": "“HOPR ha desarrollado esta tecnología open-source innovadora para ser usada por desarrolladores preocupados por la privacidad alrededor del mundo. HOPR está integrado en nuestra tecnología de punta que conserva la privacidad para salvar vidas sin comprometer privacidad.”",
+    "slideAMain": "HOPR ha desarrollado esta tecnología open-source innovadora para ser usada por desarrolladores preocupados por la privacidad alrededor del mundo. HOPR está integrado en nuestra tecnología de punta que conserva la privacidad para salvar vidas sin comprometer privacidad.",
     "slideB": "Beniamin Mincu, Elrond CEO.",
     "slideBMain": "“El protocolo HOPR ofrece un nuevo estándar para desempeño a escala internet, seguridad probabilística y seudonimato criptográfico. Estamos contentos de unir los últimos puntos de entrada de la red Elrond con HOPR y de ofrecer una experiencia de usuario realmente descentralizada y privada de punto a punto.”",
     "slideC": "Gin Chao, Binance Strategy Officer",

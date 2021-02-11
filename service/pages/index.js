@@ -19,6 +19,7 @@ export default function Home() {
       setWelcomeAnimate(false);
     }, 600);
   }, []);
+
   return (
     <AnimatePresence>
       <Layout>

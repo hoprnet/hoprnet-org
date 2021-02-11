@@ -9,7 +9,6 @@ const Hero = forwardRef(
     {
       modePreSales,
       setShowModal,
-      changeModePreSale,
     },
     ref
   ) => {
@@ -43,15 +42,12 @@ const Hero = forwardRef(
       <>
         <section ref={area} className="section-hero">
           <HeroInfo />
-          <div onClick={() => changeModePreSale()} className="changeBtn-style">
-            <p>Show Pre-sale</p>
-          </div>
 
           {videoMobile ? (
             <iframe
               allow="autoplay; fullscreen"
               className="background-video"
-              src="https://player.vimeo.com/video/508845856?autoplay=1&loop=1&title=0&byline=0&muted=true&responsive=true&controls=false"
+              src="https://player.vimeo.com/video/508845856?autoplay=1&loop=1&title=0&byline=0&muted=true&responsive=true&controls=false&app_id=122963"
               frameBorder="0"
               allowFullScreen
               width="100%"
@@ -60,7 +56,7 @@ const Hero = forwardRef(
             <iframe
               allow="autoplay; fullscreen"
               className="background-video"
-              src="https://player.vimeo.com/video/508847974?autoplay=1&loop=1&title=0&byline=0&muted=true&responsive=true&controls=false"
+              src="https://player.vimeo.com/video/508847974?autoplay=1&loop=1&title=0&byline=0&muted=true&responsive=true&controls=false&app_id=122963"
               frameBorder="0"
               allowFullScreen
               width="100%"
@@ -69,7 +65,7 @@ const Hero = forwardRef(
             <iframe
               allow="autoplay; fullscreen"
               className="background-video"
-              src="https://player.vimeo.com/video/508834454?autoplay=1&loop=1&title=0&byline=0&muted=true&responsive=true&controls=false"
+              src="https://player.vimeo.com/video/508834454?autoplay=1&loop=1&title=0&byline=0&muted=true&responsive=true&controls=false&app_id=122963"
               frameBorder="0"
               allowFullScreen
               width="100%"
