@@ -34,10 +34,9 @@ const aVideos = [
     title: 'Tech Deepdive',
     video: 'https://player.vimeo.com/video/513105733',
   },
-]
+];
 
 export const BannerGrid = () => {
-
   return (
     <SectionContainer extraClass="banners">
       <div className="banner-row">
