@@ -44,46 +44,47 @@ export const BannerItem = ({
             showingControls
           )
         : src
-        ? renderDownloadVideo(link, () => (
-            <img alt={alt} height={height} src={src} width={width} />
-          ))
+        ? renderDownloadVideo(link, alt, height, src, width)
         : null}
     </div>
   );
 };
 
 const renderVimeoVideo = (src, showingControls) => {
+  // we render both iframes, one with controls and one with no controls
   return (
     <div className="embed-container">
       <iframe
-        hidden={showingControls}
-        allowFullScreen
-        allow="autoplay; fullscreen"
+        src={`${src}&controls=0`}
         className="video"
         frameBorder="0"
-        src={`${src}&controls=0`}
+        style={{
+          opacity: Number(!showingControls),
+        }}
       />
       <iframe
-        hidden={!showingControls}
-        allowFullScreen
-        allow="autoplay; fullscreen"
+        src={`${src}&controls=1`}
         className="video"
         frameBorder="0"
-        src={`${src}&controls=1`}
+        allowFullScreen
+        allow="autoplay; fullscreen"
+        style={{
+          opacity: Number(showingControls),
+        }}
       />
     </div>
   );
 };
 
-const renderDownloadVideo = (link, ImgWrapper) => {
+const renderDownloadVideo = (link, alt, height, src, width) => {
   return (
     <div>
       {link ? (
         <a href={link} download target="_blank">
-          <ImgWrapper />
+          <img alt={alt} height={height} src={src} width={width} />
         </a>
       ) : (
-        <ImgWrapper />
+        <img alt={alt} height={height} src={src} width={width} />
       )}
     </div>
   );
