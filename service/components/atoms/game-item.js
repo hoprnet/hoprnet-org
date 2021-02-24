@@ -3,6 +3,7 @@ import { Button, GameCountdown } from '..';
 
 export const GameItem = ({
   answer,
+  city,
   date,
   destination,
   hour,
@@ -13,13 +14,16 @@ export const GameItem = ({
   video = 'https://player.vimeo.com/video/513096293',
   visible,
 }) => {
+  const changeVideo = () => {
+    onFetch(city);
+  };
 
   return (
     <>
       <div className="event-item" onClick={onClick}>
         <p>{destination}</p>
         <p>{hour}</p>
-        <GameCountdown endDate={date} onFinish={onFetch} />
+        <GameCountdown endDate={date} onFinish={changeVideo} />
       </div>
       {visible && (
         <div className="quiz">

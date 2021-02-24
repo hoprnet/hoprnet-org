@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { GameItem, SectionContainer } from '..';
 
 export const WinSchedules = () => {
+  const isDebug = false;
   const [accordionVisible, setVisible] = useState(null);
   const [video, setVideo] = useState();
   const [answer, setAnswer] = useState('');
@@ -20,20 +21,24 @@ export const WinSchedules = () => {
     }
   };
 
-  const fetchVideo = async () => {
-    const result = await fetch(
-      'https://api.hoprnet.org/api/fetchVideo',
-      {
-        method: 'POST',
-        headers: {
-          'Content-type': 'application/json; charset=UTF-8',
+  const fetchVideo = async (current) => {
+    if (!isDebug) {
+      const result = await fetch(
+        'https://api.hoprnet.org/api/fetchVideo',
+        {
+          method: 'POST',
+          headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+          },
         },
-      },
-    );
-    if (result) {
-      const oJson = await result.json();
-      setVisible(oJson?.city);
-      setVideo(`https://player.vimeo.com/video/${oJson.url?.split('/').reverse()[0]}`);
+      );
+      if (result) {
+        const oJson = await result.json();
+        setVisible(oJson?.city);
+        setVideo(`https://player.vimeo.com/video/${oJson.url?.split('/').reverse()[0]}`);
+      }
+    } else {
+      setVisible(current);
     }
   };
 
@@ -107,8 +112,46 @@ export const WinSchedules = () => {
       hour: '12:00 UTC-9',
       ht: 'SF',
       video: 'SAN_FRANCISCO',
-    }
+    },
   ];
+
+  if (isDebug) {
+    aData.push({
+      date: 'Feb 24, 2021 00:10:00 UTC-06:00',
+      destination: 'Test 001, MX',
+      hour: '23:40 UTC-6',
+      ht: 'SF',
+      video: 'MX001',
+    },
+    {
+      date: 'Feb 24, 2021 00:15:00 UTC-06:00',
+      destination: 'Test 002, MX',
+      hour: '23:45 UTC-6',
+      ht: 'SF',
+      video: 'MX002',
+    },
+    {
+      date: 'Feb 24, 2021 00:20:00 UTC-06:00',
+      destination: 'Test 003, MX',
+      hour: '23:50 UTC-6',
+      ht: 'SF',
+      video: 'MX003',
+    },
+    {
+      date: 'Feb 24, 2021 00:25:00 UTC-06:00',
+      destination: 'Test 004, MX',
+      hour: '23:55 UTC-6',
+      ht: 'SF',
+      video: 'MX004',
+    },
+    {
+      date: 'Feb 24, 2021 00:30:00 UTC-06:00',
+      destination: 'Test 005, MX',
+      hour: '00:00 UTC-6',
+      ht: 'SF',
+      video: 'MX005',
+    });
+  }
 
   const getTwitterIntent = (sDestination) => {
     let sUrl = `https://twitter.com/intent/tweet?text=@hopnet It\'s $HOPR launch day! My answer is ${answer}&hashtags=${sDestination},HOPRLaunch`;
@@ -124,8 +167,9 @@ export const WinSchedules = () => {
           destination={oItem.destination}
           hour={oItem.hour}
           key={oItem.video}
+          city={oItem.video}
           onClick={() => setItemVisible(oItem.video)}
-          onFetch={() => fetchVideo()}
+          onFetch={fetchVideo}
           setAnswer={setAnswer}
           to={getTwitterIntent(oItem.ht)}
           video={video}
