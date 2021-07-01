@@ -7,25 +7,25 @@ export default function Blogs() {
     {
       link: '/blog#post-blog',
       img: 'assets/icons/with-yellow-ball/shield.png',
-      label: 'Privacy Blog',
+      label: 'common:privacyBlog',
       delayTime: '100',
     },
     {
       link: '/blog#post-blog',
       img: 'assets/icons/with-yellow-ball/lock-4.png',
-      label: 'Crypto Blog',
+      label: 'common:cryptoBlog',
       delayTime: '150',
     },
     {
       link: '/blog#post-blog',
       img: 'assets/icons/with-yellow-ball/programming-team-chat-3.png',
-      label: 'Tech Blog',
+      label: 'common:techBlog',
       delayTime: '200',
     },
     {
       link: '/blog#post-blog',
       img: 'assets/icons/with-yellow-ball/light-bulb-shine.png',
-      label: 'News Blog',
+      label: 'common:newsBlog',
       delayTime: '250',
     },
   ];
@@ -37,7 +37,7 @@ export default function Blogs() {
         data-aos="fade-zoom-in"
         data-aos-easing="ease-in-back"
       >
-        <h2 className="the-aux-margin">HOPR Blogs</h2>
+        <h2 className="the-aux-margin">{t('home:blogs.title')}</h2>
       </div>
       <div className=" list-items helper-box-mob">
         {data.map((e, index) => {

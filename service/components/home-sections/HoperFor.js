@@ -7,7 +7,7 @@ export default function HoperFor() {
     {
       link: 'https://github.com/hoprnet',
       img: '/assets/icons/with-yellow-ball/shield.png',
-      label: 'Privacy Blog',
+      label: 'common:privacyBlog',
       delayTime: '100',
     },
     {

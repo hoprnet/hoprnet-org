@@ -137,9 +137,11 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
   };
 
   const dataDate = dataSupply.map((item) => {
-    return item.Date + '_' + t(`home:graphic.month_${item.Date}`);
+    const sMonth = t('home:graphic.month', { nMonth: item.Date });
+    return item.Date + '_' + sMonth;
   });
-  const processData = (key) =>
+
+  const processData = key =>
     dataSupply.map(oItem => {
       let nElem = oItem[key];
       return nElem ? parseFloat(nElem.split(',').join('').trim()) : undefined;

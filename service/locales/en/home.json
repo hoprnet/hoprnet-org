@@ -64,58 +64,7 @@
     "team": "Team & Advisors",
     "treasury": "Treasury",
     "votes": "home_graphic_votes",
-    "month_1": "Month 1",
-    "month_2": "Month 2",
-    "month_3": "Month 3",
-    "month_4": "Month 4",
-    "month_5": "Month 5",
-    "month_6": "Month 6",
-    "month_7": "Month 7",
-    "month_8": "Month 8",
-    "month_9": "Month 9",
-    "month_10": "Month 10",
-    "month_11": "Month 11",
-    "month_12": "Month 12",
-    "month_13": "Month 13",
-    "month_14": "Month 14",
-    "month_15": "Month 15",
-    "month_16": "Month 16",
-    "month_17": "Month 17",
-    "month_18": "Month 18",
-    "month_19": "Month 19",
-    "month_20": "Month 20",
-    "month_21": "Month 21",
-    "month_22": "Month 22",
-    "month_23": "Month 23",
-    "month_24": "Month 24",
-    "month_25": "Month 25",
-    "month_26": "Month 26",
-    "month_27": "Month 27",
-    "month_28": "Month 28",
-    "month_29": "Month 29",
-    "month_30": "Month 30",
-    "month_31": "Month 31",
-    "month_32": "Month 32",
-    "month_33": "Month 33",
-    "month_34": "Month 34",
-    "month_35": "Month 35",
-    "month_36": "Month 36",
-    "month_37": "Month 37",
-    "month_38": "Month 38",
-    "month_39": "Month 39",
-    "month_40": "Month 40",
-    "month_41": "Month 41",
-    "month_42": "Month 42",
-    "month_43": "Month 43",
-    "month_44": "Month 44",
-    "month_45": "Month 45",
-    "month_46": "Month 46",
-    "month_47": "Month 47",
-    "month_48": "Month 48",
-    "month_49": "Month 49",
-    "month_50": "Month 50",
-    "month_51": "Month 51",
-    "month_52": "Month 52"
+    "month": "Month {{nMonth}}"
   },
   "hero": {
     "subtitle": "THE HOPR TOKEN LAUNCH BEGINS IN:",
@@ -225,5 +174,58 @@
   "digiWithout": {
     "title": "Digitalization without privacy concerns",
     "content": "<ol><li>Securely access private documents<\/li><li><a href=\"https:\/\/matrix.org\/\" target=\"_blank\" rel=\"noopener noreferrer\"><span className=\"text-color-high underline\">Chat in private<\/span><\/a>, so not even the provider knows who you\u2019re talking to<\/li><li><a href=\"https:\/\/www.sherpany.com\/en\/\" target=\"_blank\" rel=\"noopener noreferrer\"><span className=\"text-color-high underline\">Manage your organization<\/span><\/a> securely from anywhere, including your home office<\/li><\/ol>"
+  },
+  "welcome": {
+    "leftSection": "JUNGFRAU RELEASE",
+    "rightSection": "HOPR TOKEN",
+    "subTitle": "Whether it’s individuals, companies or institutions – the HOPR protocol provides full control over privacy, data and metadata. HOPR lays the groundwork for a more sovereign and safe internet. For everyone.",
+    "title": "Changing Data Privacy For Good"
+  },
+  "news": {
+    "coindesk": {
+      "about": "Binance Labs, the incubation and seed funding arm of the world’s largest crypto exchange, has made its first investment this year, backing decentralized privacy startup HOPR.",
+      "alt": "Coindesk"
+    },
+    "coinTelegraph": {
+      "about": "The privacy-focused network allows users to run HOPR nodes, stake and get rewards with HOPR tokens while providing privacy for Web 3.",
+      "alt": "Coin Telegraph"
+    },
+    "moneyToday": {
+      "about": "From award-winning blockchain hackers, Silicon Valley tech veterans and a bold vision that could become a reality in Switzerland.",
+      "alt": "Money Today"
+    },
+    "title": "In The News"
+  },
+  "hoperIs": {
+    "enablingData": {
+      "main": "We're building the HOPR network to give people and companies control over their level of data privacy.",
+      "title": "Enabling Data Privacy"
+    },
+    "openSource": {
+      "main": "The HOPR community fights for the digital privacy of the future. Everybody can become a part of our movement.",
+      "title": "Open Source Support"
+    },
+    "personal": {
+      "for": "Personal",
+      "main": "From testnet game sessions to reward bounties, join our <a href=\"https:\/\/t.me/hoprnet\" target=\"_blank\" rel=\"noopener noreferrer\" className=\"text-color-high underline\">Telegram</a> to become part of our growing community.<br />",
+      "title": "Hackathons + Community"
+    },
+    "professional": {
+      "for": "Professional",
+      "main": "HOPR is providing worry-free privacy to everyone. <a href=\"/partners\" target=\"_blank\" rel=\"noopener noreferrer\" className=\"text-color-high underline\">Reach out to us</a> if you and your customers deserve the best.",
+      "title": "Your company"
+    },
+    "title": "HOPR Is",
+    "titleBottom": "We Want You To Grow"
+  },
+  "blogs": {
+    "title": "HOPR Blogs"
+  },
+  "team": {
+    "paragraph": "<p> HOPR is a digital commons built by and for an open community that has no single owner or single point of failure. At the same time, delivery of complex software projects needs commitment and accountability. <br /> Therefore, the HOPR Association provided a first grant to the HOPR Services AG to develop and support a first version of the HOPR protocol in Typescript to bootstrap the ecosystem. </p>",
+    "title": "Team"
+  },
+  "contact": {
+    "getAll": "Get All Our Latest Updates!"
   }
 }

@@ -1,5 +1,5 @@
-import React, { useEffect, forwardRef, useState } from 'react';
-import useTranslation from 'next-translate/useTranslation';
+import React, { useEffect, forwardRef } from 'react';
+import { useTranslation } from '../../hooks/translation';
 import { usePrice } from '../hooks/usePrice';
 
 const HomeHeadline = forwardRef((
@@ -28,7 +28,7 @@ const HomeHeadline = forwardRef((
         <div className="container">
           <div className="wrapper-sales-for">
             <div className="card-view the-balancer">
-              <h3 style={{ fontWeight: 'bold' }}>Now on Uniswap</h3>
+            <h3 style={{ fontWeight: 'bold' }}>{t('common:nowOnUnisap')}</h3>
               <div className="containerImg">
                 <img
                   src="/assets/images/HPR_Favicon.svg"
@@ -54,12 +54,9 @@ const HomeHeadline = forwardRef((
         <div className="container help-area-padding">
           <div className="helper-test">
             <div className="wrapper-test">
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: t('home:headline.beforeInfoTop'),
-                }}
-                className="special"
-              ></p>
+              <p className="special">
+                {t('home:headline.beforeInfoTop')}
+              </p>
               <p className="special">{t('home:headline.beforeInfoBottom')}</p>
             </div>
           </div>

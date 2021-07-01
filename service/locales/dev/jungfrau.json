@@ -1,0 +1,31 @@
+{
+  "headline": {
+    "title": "jungfrau_headline_title"
+  },
+  "contest": {
+    "paragraph": "jungfrau_contest_paragraph"
+  },
+  "release": {
+    "content": "jungfrau_release_content",
+    "title": "jungfrau_release_title"
+  },
+  "banner": {
+    "downloadScreensaver": "jungfrau_banner_downloadScreensaver",
+    "downloadScreensaverAlt": "jungfrau_banner_downloadScreensaverAlt",
+    "hoprHardware": "jungfrau_banner_hoprHardware",
+    "jungfrauRel": "jungfrau_banner_jungfrauRel",
+    "makingOf": "jungfrau_banner_makingOf",
+    "ourTeam": "jungfrau_banner_ourTeam",
+    "ourValues": "jungfrau_banner_ourValues",
+    "techDeep": "jungfrau_banner_techDeep",
+    "whyJungfrau": "jungfrau_banner_whyJungfrau",
+    "winTrip": "jungfrau_banner_winTrip"
+  },
+  "winPrizes": {
+    "content": "jungfrau_winPrizes_content",
+    "title": "jungfrau_winPrizes_content"
+  },
+  "terms": {
+    "content": "jungfrau_terms_content"
+  }
+}

@@ -1,36 +1,37 @@
 import React from 'react';
+import { useTranslation } from '../../hooks/translation';
 
 export default function HoperIs() {
+  const { t } = useTranslation();
+
   const dataTop = [
     {
-      title: 'Enabling Data Privacy',
+      title: 'home:hoperIs.enablingData.title',
       img: 'assets/icons/with-blue-stroke/common-file-lock.png',
-      main: ` We're building the HOPR network to give people and companies control over their level of data
-      privacy.`,
+      main: 'home:hoperIs.enablingData.main',
       delayTime: '100',
     },
     {
-      title: 'Open Source Support',
+      title: 'home:hoperIs.openSource.title',
       img: 'assets/icons/with-blue-stroke/user-signal.png',
-      main:
-        '  The HOPR community fights for the digital privacy of the future. Everybody can become a part of our movement.',
+      main: 'home:hoperIs.openSource.main',
       delayTime: '150',
     },
   ];
 
   const dataBottom = [
     {
-      forClient: 'Personal',
-      title: 'Hackathons + Community',
+      forClient: 'home:hoperIs.personal.for',
+      title: 'home:hoperIs.personal.title',
       img: 'assets/icons/with-blue-stroke/love-heart-keyhole.png',
-      main: `From testnet game sessions to reward bounties, join our <a href="https://t.me/hoprnet" target="_blank" rel="noopener noreferrer" className="text-color-high underline">Telegram</a> to become part of our growing community.<br />`,
+      main: 'home:hoperIs.personal.main',
       delayTime: '200',
     },
     {
-      forClient: 'Professional',
-      title: 'Your company',
+      forClient: 'home:hoperIs.professional.for',
+      title: 'home:hoperIs.professional.title',
       img: 'assets/icons/with-blue-stroke/building-modern.png',
-      main: `HOPR is providing worry-free privacy to everyone. <a href="/partners" target="_blank" rel="noopener noreferrer" className="text-color-high underline">Reach out to us</a> if you and your customers deserve the best.`,
+      main: 'home:hoperIs.professional.main',
       delayTime: '250',
     },
   ];
@@ -43,12 +44,12 @@ export default function HoperIs() {
           data-aos="fade-zoom-in"
           data-aos-easing="ease-in-back"
         >
-          <h2>HOPR Is</h2>
+          <h2>{t('home:hoperIs.title')}</h2>
         </div>
 
         <div className="items-list list-two-elements">
           {dataTop.map((e, index) => {
-            const { title, main, img, about, delayTime } = e;
+            const { title, main, img, delayTime } = e;
             return (
               <div
                 key={index}
@@ -59,17 +60,14 @@ export default function HoperIs() {
               >
                 <div className="main">
                   <div className="container-img mb-12">
-                    <img src={img} alt={about} />
+                    <img src={img} alt={t(title)} />
                   </div>
 
                   <div>
-                    <h4>{title}</h4>
-                    <div
-                      className="list-text"
-                      dangerouslySetInnerHTML={{
-                        __html: main,
-                      }}
-                    ></div>
+                    <h4>{t(title)}</h4>
+                    <div className="list-text">
+                      {t(main)}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -82,7 +80,7 @@ export default function HoperIs() {
           data-aos="fade-zoom-in"
           data-aos-easing="ease-in-back"
         >
-          <h2>We Want You To Grow</h2>
+          <h2>{t('home:hoperIs.titleBottom')}</h2>
         </div>
 
         <div className="items-list list-two-elements">
@@ -97,19 +95,16 @@ export default function HoperIs() {
                 className="element-item"
               >
                 <div className="main">
-                  <p>{forClient}</p>
+                  <p>{t(forClient)}</p>
                   <div className="container-img mb-12">
-                    <img src={img} alt={title} />
+                    <img src={img} alt={t(title)} />
                   </div>
 
                   <div>
-                    <h4>{title}</h4>
-                    <div
-                      className="list-text"
-                      dangerouslySetInnerHTML={{
-                        __html: main,
-                      }}
-                    ></div>
+                    <h4>{t(title)}</h4>
+                    <div className="list-text" >
+                      {t(main)}
+                    </div>
                   </div>
                 </div>
               </div>

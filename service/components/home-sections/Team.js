@@ -1,12 +1,15 @@
 import React from 'react';
+import { useTranslation } from '../../hooks/translation';
 
 export default function Team() {
+  const { t } = useTranslation();
+
   return (
     <>
       <section className="section-team-header">
         <div className="container">
           <div className="container-sm sub-title">
-            <h2>Team</h2>
+            <h2>{t('home:team.title')}</h2>
           </div>
         </div>
       </section>
@@ -16,20 +19,12 @@ export default function Team() {
             <img
               data-aos="fade-down"
               src="assets/icons/cards/team-card-with-blue-stroke.png"
-              alt="Team"
+              alt={t('home:team.title')}
             />
           </a>
         </div>
         <div>
-          <p>
-            HOPR is a digital commons built by and for an open community that has
-            no single owner or single point of failure. At the same time, delivery
-            of complex software projects needs commitment and accountability.
-            <br />
-            Therefore, the HOPR Association provided a first grant to the HOPR
-            Services AG to develop and support a first version of the HOPR
-            protocol in Typescript to bootstrap the ecosystem.
-          </p>
+          {t('home:team.paragraph')}
         </div>
       </div>
     </>

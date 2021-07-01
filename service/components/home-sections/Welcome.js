@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useTranslation } from '../../hooks/translation';
 
-export default function Welcome({ welcomeAnimate }) {
+export default function Welcome() {
   const [initialAni, setInitialAni] = useState(false);
+  const { t } = useTranslation();
 
   useEffect(() => {
     setTimeout(() => {
@@ -14,11 +16,9 @@ export default function Welcome({ welcomeAnimate }) {
     <div className={'welcome-section invert-color ' + (initialAni ? 'show-hi' : '')}>
       <div className="section-top center-on-the-box container ">
         <div className="main-labels ">
-          <h1> Changing Data Privacy For Good</h1>
+          <h1>{t('home:welcome.title')}</h1>
           <div className="help-box">
-            <p>
-              Whether it’s individuals, companies or institutions – the HOPR protocol provides full control over privacy, data and metadata. HOPR lays the groundwork for a more sovereign and safe internet. For everyone.
-            </p>
+            <p>{t('home:welcome.subTitle')}</p>
           </div>
         </div>
       </div>
@@ -26,14 +26,14 @@ export default function Welcome({ welcomeAnimate }) {
         <Link href="/token">
           <a className="right-container center-on-the-box welcome welcome--left">
             <div className="text-area">
-              <h2>HOPR TOKEN</h2>
+              <h2>{t('home:welcome.rightSection')}</h2>
             </div>
           </a>
         </Link>
         <Link href="/win">
           <a className="left-container center-on-the-box welcome welcome--right">
             <div className="text-area">
-              <h2>JUNGFRAU RELEASE</h2>
+              <h2>{t('home:welcome.leftSection')}</h2>
             </div>
           </a>
         </Link>

@@ -1,65 +1,67 @@
 import React from 'react';
 import { BannerItem, SectionContainer } from '..';
+import { useTranslation } from '../../hooks/translation';
 
 const aVideos = [
   {
-    title: 'Jungfrau Release',
+    title: 'jungfrauRel',
     video: 'https://vimeo.com/513101933',
     preview: 'https://i.vimeocdn.com/video/1064325853.webp',
   },
   {
-    title: 'Our Team',
+    title: 'ourTeam',
     video: 'https://vimeo.com/513096259',
     preview: 'https://i.vimeocdn.com/video/1062368155.webp',
   },
   {
-    title: 'HOPR Hardware Node',
+    title: 'hoprHardware',
     video: 'https://vimeo.com/513096240',
     preview: 'https://i.vimeocdn.com/video/1062367955.webp',
   },
   {
-    title: 'Why Jungfraujoch?',
+    title: 'whyJungfrau',
     video: 'https://vimeo.com/513096330',
     preview: 'https://i.vimeocdn.com/video/1062371659.webp',
   },
   {
-    title: 'Making of',
+    title: 'makingOf',
     video: 'https://vimeo.com/513096151',
     preview: 'https://i.vimeocdn.com/video/1064325388.webp',
   },
   {
-    title: 'Our Values',
+    title: 'ourValues',
     video: 'https://vimeo.com/513096293',
     preview: 'https://i.vimeocdn.com/video/1062368114.webp',
   },
   {
-    title: 'Win a Trip!',
+    title: 'winTrip',
     video: 'https://vimeo.com/514633549',
     preview: 'https://i.vimeocdn.com/video/1065570649.webp',
   },
   {
-    title: 'Tech Deepdive',
+    title: 'techDeep',
     video: 'https://vimeo.com/513105733',
     preview: 'https://i.vimeocdn.com/video/1062385601.webp',
   },
-]
+];
 
 export const BannerGrid = () => {
+  const { t } = useTranslation();
 
   return (
     <SectionContainer extraClass="banners">
       <div className="banner-row">
         {aVideos.map(({ title, video, preview }, nIndex) => (
           <BannerItem
-            blindText={title}
+            blindText={t(title)}
             key={nIndex}
             preview={preview}
             video={video}
           />
         ))}
         <BannerItem
-          alt="Download Screensaver"
-          blindText="Download our Jungfraujoch-Screensaver"
+          alt={t('jungfrau:banner.downloadScreensaverAlt')}
+          blindText={t('jungfrau:banner.downloadScreensaver')}
           link="https://assets.hoprnet.org/HOPR_Screensaver.mp4"
           src="/assets/images/win/win-banner-8.jpg"
         />

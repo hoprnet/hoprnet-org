@@ -19,20 +19,22 @@ export default function Layout({ visibleNow, children }) {
 
   return (
     <AnimatePresence>
-      <div className="init-mask" />
-      <ScrollReveal
-        ref={scrollReveal}
-        children={() => (
-          <>
-            <Header />
-            <div className="cursor">
-              <Navbar visibleNow={visibleNow} />
-              {children}
-              {router.pathname !== '/token' ? <Footer /> : null}
-            </div>
-          </>
-        )}
-      />
+      <>
+        <div className="init-mask" />
+        <ScrollReveal
+          ref={scrollReveal}
+          children={() => (
+            <>
+              <Header />
+              <div className="cursor">
+                <Navbar visibleNow={visibleNow} />
+                {children}
+                {router.pathname !== '/token' ? <Footer /> : null}
+              </div>
+            </>
+          )}
+        />
+      </>
     </AnimatePresence>
   );
 }

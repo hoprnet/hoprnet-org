@@ -62,6 +62,46 @@ expose the site on port `3000` by default.
 
 4. All our work is send as Pull Request (PR) to `development`, and has to be approved by another team member. Production is on `main`, and requires at least `two` team members approval.
 
+## Translations
+All the text content in the site are in translation labels. So, if you want to change any text you must find the correct label and replace it in the json files of required languages. These files are located in locales dir. Locales dir have the next dir structure where each dir is a language:
+
+```bash
+├── de
+├── dev
+├── en
+├── es
+├── ja
+├── ko
+├── pt
+├── ru
+├── tr
+└── zh
+```
+
+Also the dir 'dev' contains the json files for the default labels.
+
+Example
+Changing text:
+
+ `Whether it’s individuals, companies or institutions – the HOPR protocol provides full control over privacy, data and metadata. HOPR lays the groundwork for a more sovereign and safe internet. For everyone.`
+
+That is allocated in homepage you must find the label in code. For this case the label is inside Welcome component `t('home:welcome.subTitle')`. All labels follows the structure `file_name:section:label`. Thus, the label would be in home.json file inside the 'welcome' section.
+
+There is a look that line in the file:    
+
+    "subTitle": "Whether it’s individuals, companies or institutions – the HOPR ...", 
+
+In the next table you can find the labels orgzanization by page and file.
+
+| Page/Section | Page location               | Translation file location | Namespace |
+|--------------|-----------------------------|---------------------------|-----------|
+| Home         | pages/index.js              | home.json                 | home:     |
+| About Us     | pages/about-us/index.js     | about.json                | about:    |
+| Technology   | pages/technology/index.js   | tech.json                 | tech:     |
+| Token        | pages/token/index.js        | home.json                 | home:     |
+| Junfrau      | pages/jungfrau/index.js     | junggrau.json             | jungfrau: |
+| Blog         | pages/blog/index.js         | blog.json                 | blog:     |
+| Common       | Common labels between pages | common.json               | common:   |
 <!-- CONTACT -->
 
 ## Contact

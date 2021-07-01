@@ -58,58 +58,7 @@
     "team": "home_graphic_team",
     "treasury": "home_graphic_treasury",
     "votes": "home_graphic_votes",
-    "month_1": "Month 1",
-    "month_2": "Month 2",
-    "month_3": "Month 3",
-    "month_4": "Month 4",
-    "month_5": "Month 5",
-    "month_6": "Month 6",
-    "month_7": "Month 7",
-    "month_8": "Month 8",
-    "month_9": "Month 9",
-    "month_10": "Month 10",
-    "month_11": "Month 11",
-    "month_12": "Month 12",
-    "month_13": "Month 13",
-    "month_14": "Month 14",
-    "month_15": "Month 15",
-    "month_16": "Month 16",
-    "month_17": "Month 17",
-    "month_18": "Month 18",
-    "month_19": "Month 19",
-    "month_20": "Month 20",
-    "month_21": "Month 21",
-    "month_22": "Month 22",
-    "month_23": "Month 23",
-    "month_24": "Month 24",
-    "month_25": "Month 25",
-    "month_26": "Month 26",
-    "month_27": "Month 27",
-    "month_28": "Month 28",
-    "month_29": "Month 29",
-    "month_30": "Month 30",
-    "month_31": "Month 31",
-    "month_32": "Month 32",
-    "month_33": "Month 33",
-    "month_34": "Month 34",
-    "month_35": "Month 35",
-    "month_36": "Month 36",
-    "month_37": "Month 37",
-    "month_38": "Month 38",
-    "month_39": "Month 39",
-    "month_40": "Month 40",
-    "month_41": "Month 41",
-    "month_42": "Month 42",
-    "month_43": "Month 43",
-    "month_44": "Month 44",
-    "month_45": "Month 45",
-    "month_46": "Month 46",
-    "month_47": "Month 47",
-    "month_48": "Month 48",
-    "month_49": "Month 49",
-    "month_50": "Month 50",
-    "month_51": "Month 51",
-    "month_52": "Month 52"
+    "month": "home_graphic_month"
   },
   "hero": {
     "subtitle": "home_hero_subtitle",
@@ -176,5 +125,58 @@
   "digiWithout": {
     "title": "home_digiwithout_title",
     "content": "home_digiwithout_content"
+  },
+  "welcome": {
+    "leftSection": "home_welcome_leftSection",
+    "rightSection": "home_welcome_rightSection",
+    "subTitle": "home_welcome_subTitle",
+    "title": "home_welcome_title"
+  },
+  "news": {
+    "coindesk": {
+      "about": "home_news_coindesk_about",
+      "alt": "home_news_coindesk_alt"
+    },
+    "coinTelegraph": {
+      "about": "home_news_coinTelegraph_about",
+      "alt": "home_news_coinTelegraph_alt"
+    },
+    "moneyToday": {
+      "about": "home_news_moneyToday_about",
+      "alt": "home_news_moneyToday_alt"
+    },
+    "title": "home_news_title"
+  },
+  "hoperIs": {
+    "enablingData": {
+      "main": "home_hoperIs_enablingData_main",
+      "title": "home_hoperIs_enablingData_title"
+    },
+    "openSource": {
+      "main": "home_hoperIs_openSource_main",
+      "title": "home_hoperIs_openSource_title"
+    },
+    "personal": {
+      "for": "home_hoperIs_personal_for",
+      "main": "home_hoperIs_personal_main",
+      "title": "home_hoperIs_personal_title"
+    },
+    "professional": {
+      "for": "home_hoperIs_professional_for",
+      "main": "home_hoperIs_professional_main",
+      "title": "home_hoperIs_professional_title"
+    },
+    "title": "home_hoperIs_title",
+    "titleBottom": "home_hoperIs_titleBottom"
+  },
+  "blogs": {
+    "title": "home_blogs_title"
+  },
+  "team": {
+    "paragraph": "home_team_paragraph",
+    "title": "home_team_title"
+  },
+  "contact": {
+    "getAll": "home_contact_getAll"
   }
 }

@@ -117,7 +117,7 @@ $font--size: (
 
 // Font Family
 @mixin font-family($elem) {
-  font-family: unquote(get-font-family($elem));
+  font-family: unquoted(get-font-family($elem));
 }
 
 // Font-size + Line-height + Kerning
